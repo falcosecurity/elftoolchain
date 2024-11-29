@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  release:
+    types:
+      - created
+
+permissions:
+  contents: write
+
+jobs:
+  release-libelf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v3
+
+    - name: Check release tag
+      id: check_tag
+      run: |
+        if [[ "${{ github.event.release.tag_name }}" != libelf-* ]]; then
+          echo "This release tag does not start with 'libelf-', skipping."
+          exit 0
+        fi
+
+    - name: Generate m4 files
+      run: |
+        cd common/sys
+        m4 -I$(pwd) -D SRCDIR=$(pwd) elfdefinitions.m4 > elfdefinitions.h
+        cd ../../libelf
+        m4 -D SRCDIR=$(pwd) libelf_fsize.m4 > libelf_fsize.c
+        m4 -D SRCDIR=$(pwd) libelf_msize.m4 > libelf_msize.c
+        m4 -D SRCDIR=$(pwd) libelf_convert.m4 > libelf_convert.c
+
+    - name: Create tar.gz package
+      run: |
+        tar -czvf ${{ github.event.release.tag_name }}.tar.gz common/ libelf/ CMakeLists.txt
+
+    - name: Upload release asset
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh release upload ${{ github.event.release.tag_name }} ${{ github.event.release.tag_name }}.tar.gz
