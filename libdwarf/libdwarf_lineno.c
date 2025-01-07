@@ -443,7 +443,8 @@ _dwarf_lineno_init(Dwarf_Die die, uint64_t offset, Dwarf_Error *error)
 	char *compdir;
 	uint64_t length, hdroff, endoff;
 	uint8_t *p;
-	int dwarf_size, fmt, i, j, ret;
+	int dwarf_size, fmt, j, ret;
+	unsigned int i;
 
 	cu = die->die_cu;
 	assert(cu != NULL);
@@ -475,9 +476,9 @@ _dwarf_lineno_init(Dwarf_Die die, uint64_t offset, Dwarf_Error *error)
 		case DW_FORM_strx2:
 		case DW_FORM_strx3:
 		case DW_FORM_strx4:
-			if (_dwarf_read_indexed_str(dbg, cu, at->u[0].u64,
-			    &compdir, error) != DW_DLE_NONE)
-				return ret;
+			if ((ret = _dwarf_read_indexed_str(dbg, cu,
+			    at->u[0].u64, &compdir, error)) != DW_DLE_NONE)
+				return (ret);
 		default:
 			break;
 		}

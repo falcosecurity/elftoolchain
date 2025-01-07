@@ -397,135 +397,149 @@ _(`DT_DEPRECATED_SPARC_REGISTER', `DT_SPARC_REGISTER')
 # Flags used in the executable header (field: e_flags).
 #
 define(`DEFINE_EHDR_FLAGS',`
-_(EF_ARM_RELEXEC,      0x00000001UL,
+_(EF_ARM_RELEXEC,      0x00000001U,
 	`dynamic segment describes only how to relocate segments')
-_(EF_ARM_HASENTRY,     0x00000002UL,
+_(EF_ARM_HASENTRY,     0x00000002U,
 	`e_entry contains a program entry point')
-_(EF_ARM_SYMSARESORTED, 0x00000004UL,
+_(EF_ARM_SYMSARESORTED, 0x00000004U,
 	`subsection of symbol table is sorted by symbol value')
-_(EF_ARM_DYNSYMSUSESEGIDX, 0x00000008UL,
+_(EF_ARM_DYNSYMSUSESEGIDX, 0x00000008U,
 	`dynamic symbol st_shndx = containing segment index + 1')
-_(EF_ARM_MAPSYMSFIRST, 0x00000010UL,
+_(EF_ARM_MAPSYMSFIRST, 0x00000010U,
 	`mapping symbols precede other local symbols in symtab')
-_(EF_ARM_BE8,          0x00800000UL,
+_(EF_ARM_BE8,          0x00800000U,
 	`file contains BE-8 code')
-_(EF_ARM_LE8,          0x00400000UL,
+_(EF_ARM_LE8,          0x00400000U,
 	`file contains LE-8 code')
-_(EF_ARM_EABIMASK,     0xFF000000UL,
+_(EF_ARM_EABIMASK,     0xFF000000U,
 	`mask for ARM EABI version number (0 denotes GNU or unknown)')
-_(EF_ARM_EABI_UNKNOWN, 0x00000000UL,
+_(EF_ARM_EABI_UNKNOWN, 0x00000000U,
 	`Unknown or GNU ARM EABI version number')
-_(EF_ARM_EABI_VER1,    0x01000000UL,
+_(EF_ARM_EABI_VER1,    0x01000000U,
 	`ARM EABI version 1')
-_(EF_ARM_EABI_VER2,    0x02000000UL,
+_(EF_ARM_EABI_VER2,    0x02000000U,
 	`ARM EABI version 2')
-_(EF_ARM_EABI_VER3,    0x03000000UL,
+_(EF_ARM_EABI_VER3,    0x03000000U,
 	`ARM EABI version 3')
-_(EF_ARM_EABI_VER4,    0x04000000UL,
+_(EF_ARM_EABI_VER4,    0x04000000U,
 	`ARM EABI version 4')
-_(EF_ARM_EABI_VER5,    0x05000000UL,
+_(EF_ARM_EABI_VER5,    0x05000000U,
 	`ARM EABI version 5')
-_(EF_ARM_INTERWORK,    0x00000004UL,
+_(EF_ARM_INTERWORK,    0x00000004U,
 	`GNU EABI extension')
-_(EF_ARM_APCS_26,      0x00000008UL,
+_(EF_ARM_APCS_26,      0x00000008U,
 	`GNU EABI extension')
-_(EF_ARM_APCS_FLOAT,   0x00000010UL,
+_(EF_ARM_APCS_FLOAT,   0x00000010U,
 	`GNU EABI extension')
-_(EF_ARM_PIC,          0x00000020UL,
+_(EF_ARM_PIC,          0x00000020U,
 	`GNU EABI extension')
-_(EF_ARM_ALIGN8,       0x00000040UL,
+_(EF_ARM_ALIGN8,       0x00000040U,
 	`GNU EABI extension')
-_(EF_ARM_NEW_ABI,      0x00000080UL,
+_(EF_ARM_NEW_ABI,      0x00000080U,
 	`GNU EABI extension')
-_(EF_ARM_OLD_ABI,      0x00000100UL,
+_(EF_ARM_OLD_ABI,      0x00000100U,
 	`GNU EABI extension')
-_(EF_ARM_SOFT_FLOAT,   0x00000200UL,
+_(EF_ARM_SOFT_FLOAT,   0x00000200U,
 	`GNU EABI extension')
-_(EF_ARM_VFP_FLOAT,    0x00000400UL,
+_(EF_ARM_VFP_FLOAT,    0x00000400U,
 	`GNU EABI extension')
-_(EF_ARM_MAVERICK_FLOAT, 0x00000800UL,
+_(EF_ARM_MAVERICK_FLOAT, 0x00000800U,
 	`GNU EABI extension')
-_(EF_MIPS_NOREORDER,   0x00000001UL,
+_(EF_LOONGARCH_ABI_SOFT_FLOAT,     0x00000001U,
+	`LoongArch software floating point emulation')
+_(EF_LOONGARCH_ABI_SINGLE_FLOAT,   0x00000002U,
+	`LoongArch 32-bit floating point registers')
+_(EF_LOONGARCH_ABI_DOUBLE_FLOAT,   0x00000003U,
+	`LoongArch 64-bit floating point registers')
+_(EF_LOONGARCH_ABI_MODIFIER_MASK,  0x00000007U,
+	`LoongArch floating point modifier mask')
+_(EF_LOONGARCH_OBJABI_V0,          0x00000000U,
+	`LoongArch object file ABI version 0')
+_(EF_LOONGARCH_OBJABI_V1,          0x00000040U,
+	`LoongArch object file ABI version 1')
+_(EF_LOONGARCH_OBJABI_MASK,        0x000000C0U,
+	`LoongArch object file ABI version mask')
+_(EF_MIPS_NOREORDER,   0x00000001U,
 	`at least one .noreorder directive appeared in the source')
-_(EF_MIPS_PIC,         0x00000002UL,
+_(EF_MIPS_PIC,         0x00000002U,
 	`file contains position independent code')
-_(EF_MIPS_CPIC,        0x00000004UL,
+_(EF_MIPS_CPIC,        0x00000004U,
 	`file code uses standard conventions for calling PIC')
-_(EF_MIPS_UCODE,       0x00000010UL,
+_(EF_MIPS_UCODE,       0x00000010U,
 	`file contains UCODE (obsolete)')
-_(EF_MIPS_ABI,	      0x00007000UL,
+_(EF_MIPS_ABI,	      0x00007000U,
 	`Application binary interface, see E_MIPS_* values')
-_(EF_MIPS_ABI2,        0x00000020UL,
+_(EF_MIPS_ABI2,        0x00000020U,
 	`file follows MIPS III 32-bit ABI')
-_(EF_MIPS_OPTIONS_FIRST, 0x00000080UL,
+_(EF_MIPS_OPTIONS_FIRST, 0x00000080U,
 	`ld(1) should process .MIPS.options section first')
-_(EF_MIPS_ARCH_ASE,    0x0F000000UL,
+_(EF_MIPS_ARCH_ASE,    0x0F000000U,
 	`file uses application-specific architectural extensions')
-_(EF_MIPS_ARCH_ASE_MDMX, 0x08000000UL,
+_(EF_MIPS_ARCH_ASE_MDMX, 0x08000000U,
 	`file uses MDMX multimedia extensions')
-_(EF_MIPS_ARCH_ASE_M16, 0x04000000UL,
+_(EF_MIPS_ARCH_ASE_M16, 0x04000000U,
 	`file uses MIPS-16 ISA extensions')
-_(EF_MIPS_ARCH_ASE_MICROMIPS, 0x02000000UL,
+_(EF_MIPS_ARCH_ASE_MICROMIPS, 0x02000000U,
 	`MicroMIPS architecture')
-_(EF_MIPS_ARCH,         0xF0000000UL,
+_(EF_MIPS_ARCH,         0xF0000000U,
 	`4-bit MIPS architecture field')
-_(EF_MIPS_ARCH_1,	0x00000000UL,
+_(EF_MIPS_ARCH_1,	0x00000000U,
 	`MIPS I instruction set')
-_(EF_MIPS_ARCH_2,	0x10000000UL,
+_(EF_MIPS_ARCH_2,	0x10000000U,
 	`MIPS II instruction set')
-_(EF_MIPS_ARCH_3,	0x20000000UL,
+_(EF_MIPS_ARCH_3,	0x20000000U,
 	`MIPS III instruction set')
-_(EF_MIPS_ARCH_4,	0x30000000UL,
+_(EF_MIPS_ARCH_4,	0x30000000U,
 	`MIPS IV instruction set')
-_(EF_MIPS_ARCH_5,	0x40000000UL,
+_(EF_MIPS_ARCH_5,	0x40000000U,
 	`Never introduced')
-_(EF_MIPS_ARCH_32,	0x50000000UL,
+_(EF_MIPS_ARCH_32,	0x50000000U,
 	`Mips32 Revision 1')
-_(EF_MIPS_ARCH_64,	0x60000000UL,
+_(EF_MIPS_ARCH_64,	0x60000000U,
 	`Mips64 Revision 1')
-_(EF_MIPS_ARCH_32R2,	0x70000000UL,
+_(EF_MIPS_ARCH_32R2,	0x70000000U,
 	`Mips32 Revision 2')
-_(EF_MIPS_ARCH_64R2,	0x80000000UL,
+_(EF_MIPS_ARCH_64R2,	0x80000000U,
 	`Mips64 Revision 2')
-_(EF_PPC_EMB,          0x80000000UL,
+_(EF_PPC_EMB,          0x80000000U,
 	`Embedded PowerPC flag')
-_(EF_PPC_RELOCATABLE,  0x00010000UL,
+_(EF_PPC_RELOCATABLE,  0x00010000U,
 	`-mrelocatable flag')
-_(EF_PPC_RELOCATABLE_LIB, 0x00008000UL,
+_(EF_PPC_RELOCATABLE_LIB, 0x00008000U,
 	`-mrelocatable-lib flag')
-_(EF_RISCV_RVC,	    0x00000001UL,
+_(EF_RISCV_RVC,	    0x00000001U,
 	`Compressed instruction extension')
-_(EF_RISCV_FLOAT_ABI_MASK, 0x00000006UL,
+_(EF_RISCV_FLOAT_ABI_MASK, 0x00000006U,
 	`Floating point ABI')
-_(EF_RISCV_FLOAT_ABI_SOFT, 0x00000000UL,
+_(EF_RISCV_FLOAT_ABI_SOFT, 0x00000000U,
 	`Software emulated floating point')
-_(EF_RISCV_FLOAT_ABI_SINGLE, 0x00000002UL,
+_(EF_RISCV_FLOAT_ABI_SINGLE, 0x00000002U,
 	`Single precision floating point')
-_(EF_RISCV_FLOAT_ABI_DOUBLE, 0x00000004UL,
+_(EF_RISCV_FLOAT_ABI_DOUBLE, 0x00000004U,
 	`Double precision floating point')
-_(EF_RISCV_FLOAT_ABI_QUAD, 0x00000006UL,
+_(EF_RISCV_FLOAT_ABI_QUAD, 0x00000006U,
 	`Quad precision floating point')
-_(EF_RISCV_RVE,	    0x00000008UL,
+_(EF_RISCV_RVE,	    0x00000008U,
 	`Compressed instruction ABI')
-_(EF_RISCV_TSO,	    0x00000010UL,
+_(EF_RISCV_TSO,	    0x00000010U,
 	`RVTSO memory consistency model')
-_(EF_SPARC_EXT_MASK,   0x00ffff00UL,
+_(EF_SPARC_EXT_MASK,   0x00FFFF00U,
 	`Vendor Extension mask')
-_(EF_SPARC_32PLUS,     0x00000100UL,
+_(EF_SPARC_32PLUS,     0x00000100U,
 	`Generic V8+ features')
-_(EF_SPARC_SUN_US1,    0x00000200UL,
+_(EF_SPARC_SUN_US1,    0x00000200U,
 	`Sun UltraSPARCTM 1 Extensions')
-_(EF_SPARC_HAL_R1,     0x00000400UL,
+_(EF_SPARC_HAL_R1,     0x00000400U,
 	`HAL R1 Extensions')
-_(EF_SPARC_SUN_US3,    0x00000800UL,
+_(EF_SPARC_SUN_US3,    0x00000800U,
 	`Sun UltraSPARC 3 Extensions')
-_(EF_SPARCV9_MM,       0x00000003UL,
+_(EF_SPARCV9_MM,       0x00000003U,
 	`Mask for Memory Model')
-_(EF_SPARCV9_TSO,      0x00000000UL,
+_(EF_SPARCV9_TSO,      0x00000000U,
 	`Total Store Ordering')
-_(EF_SPARCV9_PSO,      0x00000001UL,
+_(EF_SPARCV9_PSO,      0x00000001U,
 	`Partial Store Ordering')
-_(EF_SPARCV9_RMO,      0x00000002UL,
+_(EF_SPARCV9_RMO,      0x00000002U,
 	`Relaxed Memory Ordering')
 ')
 
@@ -561,11 +575,11 @@ _(EI_NIDENT,  16,
 # The ELF class of an object.
 #
 define(`DEFINE_ELF_CLASSES',`
-_(ELFCLASSNONE, 0,
+_(ELFCLASSNONE, 0U,
 	`Unknown ELF class')
-_(ELFCLASS32,   1,
+_(ELFCLASS32,   1U,
 	`32 bit objects')
-_(ELFCLASS64,   2,
+_(ELFCLASS64,   2U,
 	`64 bit objects')
 ')
 
@@ -573,11 +587,11 @@ _(ELFCLASS64,   2,
 # Endianness of data in an ELF object.
 #
 define(`DEFINE_ELF_DATA_ENDIANNESSES',`
-_(ELFDATANONE, 0,
+_(ELFDATANONE, 0U,
 	`Unknown data endianness')
-_(ELFDATA2LSB, 1,
+_(ELFDATA2LSB, 1U,
 	`little endian')
-_(ELFDATA2MSB, 2,
+_(ELFDATA2MSB, 2U,
 	`big endian')
 ')
 
@@ -603,51 +617,51 @@ _(SELFMAG, 4)
 # ELF OS ABI field.
 #
 define(`DEFINE_ELF_OSABIS',`
-_(ELFOSABI_NONE,       0,
+_(ELFOSABI_NONE,       0U,
 	`No extensions or unspecified')
-_(ELFOSABI_SYSV,       0,
+_(ELFOSABI_SYSV,       0U,
 	`SYSV')
-_(ELFOSABI_HPUX,       1,
+_(ELFOSABI_HPUX,       1U,
 	`Hewlett-Packard HP-UX')
-_(ELFOSABI_NETBSD,     2,
+_(ELFOSABI_NETBSD,     2U,
 	`NetBSD')
-_(ELFOSABI_GNU,        3,
+_(ELFOSABI_GNU,        3U,
 	`GNU')
-_(ELFOSABI_HURD,       4,
+_(ELFOSABI_HURD,       4U,
 	`GNU/HURD')
-_(ELFOSABI_86OPEN,     5,
+_(ELFOSABI_86OPEN,     5U,
 	`86Open Common ABI')
-_(ELFOSABI_SOLARIS,    6,
+_(ELFOSABI_SOLARIS,    6U,
 	`Sun Solaris')
-_(ELFOSABI_AIX,        7,
+_(ELFOSABI_AIX,        7U,
 	`AIX')
-_(ELFOSABI_IRIX,       8,
+_(ELFOSABI_IRIX,       8U,
 	`IRIX')
-_(ELFOSABI_FREEBSD,    9,
+_(ELFOSABI_FREEBSD,    9U,
 	`FreeBSD')
-_(ELFOSABI_TRU64,      10,
+_(ELFOSABI_TRU64,      10U,
 	`Compaq TRU64 UNIX')
-_(ELFOSABI_MODESTO,    11,
+_(ELFOSABI_MODESTO,    11U,
 	`Novell Modesto')
-_(ELFOSABI_OPENBSD,    12,
+_(ELFOSABI_OPENBSD,    12U,
 	`Open BSD')
-_(ELFOSABI_OPENVMS,    13,
+_(ELFOSABI_OPENVMS,    13U,
 	`Open VMS')
-_(ELFOSABI_NSK,        14,
+_(ELFOSABI_NSK,        14U,
 	`Hewlett-Packard Non-Stop Kernel')
-_(ELFOSABI_AROS,       15,
+_(ELFOSABI_AROS,       15U,
 	`Amiga Research OS')
-_(ELFOSABI_FENIXOS,    16,
+_(ELFOSABI_FENIXOS,    16U,
 	`The FenixOS highly scalable multi-core OS')
-_(ELFOSABI_CLOUDABI,   17,
+_(ELFOSABI_CLOUDABI,   17U,
 	`Nuxi CloudABI')
-_(ELFOSABI_OPENVOS,    18,
+_(ELFOSABI_OPENVOS,    18U,
 	`Stratus Technologies OpenVOS')
-_(ELFOSABI_ARM_AEABI,  64,
+_(ELFOSABI_ARM_AEABI,  64U,
 	`ARM specific symbol versioning extensions')
-_(ELFOSABI_ARM,        97,
+_(ELFOSABI_ARM,        97U,
 	`ARM ABI')
-_(ELFOSABI_STANDALONE, 255,
+_(ELFOSABI_STANDALONE, 255U,
 	`Standalone (embedded) application')
 ')
 
@@ -912,8 +926,6 @@ _(EM_STXP7X,           166,
 	`STMicroelectronics STxP7x family of configurable and extensible RISC processors')
 _(EM_NDS32,            167,
 	`Andes Technology compact code size embedded RISC processor family')
-_(EM_ECOG1,            168,
-	`Cyan Technology eCOG1X family')
 _(EM_ECOG1X,           168,
 	`Cyan Technology eCOG1X family')
 _(EM_MAXQ30,           169,
@@ -1073,27 +1085,28 @@ _(EM_SIMA_MLA,         265,
 _(EM_BANG,             266,
 	`Cambricon BANG')
 _(EM_LOONGGPU,         267,
-	`Loongson Loongarch')
+	`Loongson LoongArch GPU')
 ')
 
 define(`DEFINE_ELF_MACHINE_TYPE_SYNONYMS',`
 _(EM_AMD64, EM_X86_64)
 _(EM_ARC_A5, EM_ARC_COMPACT)
+_(EM_ECOG1, EM_ECOG1X)
 ')
 
 #
 # ELF file types: (ET_*).
 #
 define(`DEFINE_ELF_TYPES',`
-_(ET_NONE,   0,
+_(ET_NONE,   0U,
 	`No file type')
-_(ET_REL,    1,
+_(ET_REL,    1U,
 	`Relocatable object')
-_(ET_EXEC,   2,
+_(ET_EXEC,   2U,
 	`Executable')
-_(ET_DYN,    3,
+_(ET_DYN,    3U,
 	`Shared object')
-_(ET_CORE,   4,
+_(ET_CORE,   4U,
 	`Core file')
 _(ET_LOOS,   0xFE00U,
 	`Begin OS-specific range')
@@ -1107,8 +1120,8 @@ _(ET_HIPROC, 0xFFFFU,
 
 # ELF file format version numbers.
 define(`DEFINE_ELF_FILE_VERSIONS',`
-_(EV_NONE, 0)
-_(EV_CURRENT, 1)
+_(EV_NONE, 0U)
+_(EV_CURRENT, 1U)
 ')
 
 #
@@ -1157,61 +1170,61 @@ _(PF_ARM_ABS,          0x40000000,
 # Types of program header table entries.
 #
 define(`DEFINE_PHDR_TYPES',`
-_(PT_NULL,             0UL,
+_(PT_NULL,             0U,
 	`ignored entry')
-_(PT_LOAD,             1UL,
+_(PT_LOAD,             1U,
 	`loadable segment')
-_(PT_DYNAMIC,          2UL,
+_(PT_DYNAMIC,          2U,
 	`contains dynamic linking information')
-_(PT_INTERP,           3UL,
+_(PT_INTERP,           3U,
 	`names an interpreter')
-_(PT_NOTE,             4UL,
+_(PT_NOTE,             4U,
 	`auxiliary information')
-_(PT_SHLIB,            5UL,
+_(PT_SHLIB,            5U,
 	`reserved')
-_(PT_PHDR,             6UL,
+_(PT_PHDR,             6U,
 	`describes the program header itself')
-_(PT_TLS,              7UL,
+_(PT_TLS,              7U,
 	`thread local storage')
-_(PT_LOOS,             0x60000000UL,
+_(PT_LOOS,             0x60000000U,
 	`start of OS-specific range')
-_(PT_SUNW_UNWIND,      0x6464E550UL,
+_(PT_SUNW_UNWIND,      0x6464E550U,
 	`Solaris/amd64 stack unwind tables')
-_(PT_GNU_EH_FRAME,     0x6474E550UL,
+_(PT_GNU_EH_FRAME,     0x6474E550U,
 	`GCC generated .eh_frame_hdr segment')
-_(PT_GNU_STACK,	    0x6474E551UL,
+_(PT_GNU_STACK,	    0x6474E551U,
 	`Stack flags')
-_(PT_GNU_RELRO,	    0x6474E552UL,
+_(PT_GNU_RELRO,	    0x6474E552U,
 	`Segment becomes read-only after relocation')
-_(PT_OPENBSD_RANDOMIZE,0x65A3DBE6UL,
+_(PT_OPENBSD_RANDOMIZE,0x65A3DBE6U,
 	`Segment filled with random data')
-_(PT_OPENBSD_WXNEEDED, 0x65A3DBE7UL,
+_(PT_OPENBSD_WXNEEDED, 0x65A3DBE7U,
 	`Program violates W^X')
-_(PT_OPENBSD_BOOTDATA, 0x65A41BE6UL,
+_(PT_OPENBSD_BOOTDATA, 0x65A41BE6U,
 	`Boot data')
-_(PT_SUNWBSS,          0x6FFFFFFAUL,
+_(PT_SUNWBSS,          0x6FFFFFFAU,
 	`A Solaris .SUNW_bss section')
-_(PT_SUNWSTACK,        0x6FFFFFFBUL,
+_(PT_SUNWSTACK,        0x6FFFFFFBU,
 	`A Solaris process stack')
-_(PT_SUNWDTRACE,       0x6FFFFFFCUL,
+_(PT_SUNWDTRACE,       0x6FFFFFFCU,
 	`Used by dtrace(1)')
-_(PT_SUNWCAP,          0x6FFFFFFDUL,
+_(PT_SUNWCAP,          0x6FFFFFFDU,
 	`Special hardware capability requirements')
-_(PT_HIOS,             0x6FFFFFFFUL,
+_(PT_HIOS,             0x6FFFFFFFU,
 	`end of OS-specific range')
-_(PT_LOPROC,           0x70000000UL,
+_(PT_LOPROC,           0x70000000U,
 	`start of processor-specific range')
-_(PT_ARM_ARCHEXT,      0x70000000UL,
+_(PT_ARM_ARCHEXT,      0x70000000U,
 	`platform architecture compatibility information')
-_(PT_ARM_EXIDX,        0x70000001UL,
+_(PT_ARM_EXIDX,        0x70000001U,
 	`exception unwind tables')
-_(PT_MIPS_REGINFO,     0x70000000UL,
+_(PT_MIPS_REGINFO,     0x70000000U,
 	`register usage information')
-_(PT_MIPS_RTPROC,      0x70000001UL,
+_(PT_MIPS_RTPROC,      0x70000001U,
 	`runtime procedure table')
-_(PT_MIPS_OPTIONS,     0x70000002UL,
+_(PT_MIPS_OPTIONS,     0x70000002U,
 	`options segment')
-_(PT_HIPROC,           0x7FFFFFFFUL,
+_(PT_HIPROC,           0x7FFFFFFFU,
 	`end of processor-specific range')
 ')
 
@@ -1225,57 +1238,57 @@ _(PT_LOSUNW,	PT_SUNWBSS)
 # Section flags.
 #
 define(`DEFINE_SECTION_FLAGS',`
-_(SHF_WRITE,           0x1,
+_(SHF_WRITE,           0x1U,
 	`writable during program execution')
-_(SHF_ALLOC,           0x2,
+_(SHF_ALLOC,           0x2U,
 	`occupies memory during program execution')
-_(SHF_EXECINSTR,       0x4,
+_(SHF_EXECINSTR,       0x4U,
 	`executable instructions')
-_(SHF_MERGE,           0x10,
+_(SHF_MERGE,           0x10U,
 	`may be merged to prevent duplication')
-_(SHF_STRINGS,         0x20,
+_(SHF_STRINGS,         0x20U,
 	`NUL-terminated character strings')
-_(SHF_INFO_LINK,       0x40,
+_(SHF_INFO_LINK,       0x40U,
 	`the sh_info field holds a link')
-_(SHF_LINK_ORDER,      0x80,
+_(SHF_LINK_ORDER,      0x80U,
 	`special ordering requirements during linking')
-_(SHF_OS_NONCONFORMING, 0x100,
+_(SHF_OS_NONCONFORMING, 0x100U,
 	`requires OS-specific processing during linking')
-_(SHF_GROUP,           0x200,
+_(SHF_GROUP,           0x200U,
 	`member of a section group')
-_(SHF_TLS,             0x400,
+_(SHF_TLS,             0x400U,
 	`holds thread-local storage')
-_(SHF_COMPRESSED,      0x800,
+_(SHF_COMPRESSED,      0x800U,
 	`holds compressed data')
-_(SHF_MASKOS,          0x0FF00000UL,
+_(SHF_MASKOS,          0x0FF00000U,
 	`bits reserved for OS-specific semantics')
-_(SHF_AMD64_LARGE,     0x10000000UL,
+_(SHF_AMD64_LARGE,     0x10000000U,
 	`section uses large code model')
-_(SHF_ENTRYSECT,       0x10000000UL,
+_(SHF_ENTRYSECT,       0x10000000U,
 	`section contains an entry point (ARM)')
-_(SHF_COMDEF,          0x80000000UL,
+_(SHF_COMDEF,          0x80000000U,
 	`section may be multiply defined in input to link step (ARM)')
-_(SHF_MIPS_GPREL,      0x10000000UL,
+_(SHF_MIPS_GPREL,      0x10000000U,
 	`section must be part of global data area')
-_(SHF_MIPS_MERGE,      0x20000000UL,
+_(SHF_MIPS_MERGE,      0x20000000U,
 	`section data should be merged to eliminate duplication')
-_(SHF_MIPS_ADDR,       0x40000000UL,
+_(SHF_MIPS_ADDR,       0x40000000U,
 	`section data is addressed by default')
-_(SHF_MIPS_STRING,     0x80000000UL,
+_(SHF_MIPS_STRING,     0x80000000U,
 	`section data is string data by default')
-_(SHF_MIPS_NOSTRIP,    0x08000000UL,
+_(SHF_MIPS_NOSTRIP,    0x08000000U,
 	`section data may not be stripped')
-_(SHF_MIPS_LOCAL,      0x04000000UL,
+_(SHF_MIPS_LOCAL,      0x04000000U,
 	`section data local to process')
-_(SHF_MIPS_NAMES,      0x02000000UL,
+_(SHF_MIPS_NAMES,      0x02000000U,
 	`linker must generate implicit hidden weak names')
-_(SHF_MIPS_NODUPE,     0x01000000UL,
+_(SHF_MIPS_NODUPE,     0x01000000U,
 	`linker must retain only one copy')
-_(SHF_ORDERED,         0x40000000UL,
+_(SHF_ORDERED,         0x40000000U,
 	`section is ordered with respect to other sections')
-_(SHF_EXCLUDE,	     0x80000000UL,
+_(SHF_EXCLUDE,         0x80000000U,
 	`section is excluded from executables and shared objects')
-_(SHF_MASKPROC,        0xF0000000UL,
+_(SHF_MASKPROC,        0xF0000000U,
 	`bits reserved for processor-specific semantics')
 ')
 
@@ -1283,7 +1296,7 @@ _(SHF_MASKPROC,        0xF0000000UL,
 # Special section indices.
 #
 define(`DEFINE_SECTION_INDICES',`
-_(SHN_UNDEF, 	0,
+_(SHN_UNDEF, 	0U,
 	 `undefined section')
 _(SHN_LORESERVE, 	0xFF00U,
 	`start of reserved area')
@@ -1331,147 +1344,147 @@ _(SHN_HIRESERVE, 	0xFFFFU,
 # Section types.
 #
 define(`DEFINE_SECTION_TYPES',`
-_(SHT_NULL,            0, `inactive header')
-_(SHT_PROGBITS,        1, `program defined information')
-_(SHT_SYMTAB,          2, `symbol table')
-_(SHT_STRTAB,          3, `string table')
-_(SHT_RELA,            4,
+_(SHT_NULL,            0U, `inactive header')
+_(SHT_PROGBITS,        1U, `program defined information')
+_(SHT_SYMTAB,          2U, `symbol table')
+_(SHT_STRTAB,          3U, `string table')
+_(SHT_RELA,            4U,
 	`relocation entries with addends')
-_(SHT_HASH,            5, `symbol hash table')
-_(SHT_DYNAMIC,         6,
+_(SHT_HASH,            5U, `symbol hash table')
+_(SHT_DYNAMIC,         6U,
 	`information for dynamic linking')
-_(SHT_NOTE,            7, `additional notes')
-_(SHT_NOBITS,          8, `section occupying no space')
-_(SHT_REL,             9,
+_(SHT_NOTE,            7U, `additional notes')
+_(SHT_NOBITS,          8U, `section occupying no space')
+_(SHT_REL,             9U,
 	`relocation entries without addends')
-_(SHT_SHLIB,           10, `reserved')
-_(SHT_DYNSYM,          11, `symbol table')
-_(SHT_INIT_ARRAY,      14,
+_(SHT_SHLIB,           10U, `reserved')
+_(SHT_DYNSYM,          11U, `symbol table')
+_(SHT_INIT_ARRAY,      14U,
 	`pointers to initialization functions')
-_(SHT_FINI_ARRAY,      15,
+_(SHT_FINI_ARRAY,      15U,
 	`pointers to termination functions')
-_(SHT_PREINIT_ARRAY,   16,
+_(SHT_PREINIT_ARRAY,   16U,
 	`pointers to functions called before initialization')
-_(SHT_GROUP,           17, `defines a section group')
-_(SHT_SYMTAB_SHNDX,    18,
+_(SHT_GROUP,           17U, `defines a section group')
+_(SHT_SYMTAB_SHNDX,    18U,
 	`used for extended section numbering')
-_(SHT_LOOS,            0x60000000UL,
+_(SHT_LOOS,            0x60000000U,
 	`start of OS-specific range')
-_(SHT_SUNW_dof,	     0x6FFFFFF4UL,
+_(SHT_SUNW_dof,	     0x6FFFFFF4U,
 	`used by dtrace')
-_(SHT_SUNW_cap,	     0x6FFFFFF5UL,
+_(SHT_SUNW_cap,	     0x6FFFFFF5U,
 	`capability requirements')
-_(SHT_GNU_ATTRIBUTES,  0x6FFFFFF5UL,
+_(SHT_GNU_ATTRIBUTES,  0x6FFFFFF5U,
 	`object attributes')
-_(SHT_SUNW_SIGNATURE,  0x6FFFFFF6UL,
+_(SHT_SUNW_SIGNATURE,  0x6FFFFFF6U,
 	`module verification signature')
-_(SHT_GNU_HASH,	     0x6FFFFFF6UL,
+_(SHT_GNU_HASH,	     0x6FFFFFF6U,
 	`GNU Hash sections')
-_(SHT_GNU_LIBLIST,     0x6FFFFFF7UL,
+_(SHT_GNU_LIBLIST,     0x6FFFFFF7U,
 	`List of libraries to be prelinked')
-_(SHT_SUNW_ANNOTATE,   0x6FFFFFF7UL,
+_(SHT_SUNW_ANNOTATE,   0x6FFFFFF7U,
 	`special section where unresolved references are allowed')
-_(SHT_SUNW_DEBUGSTR,   0x6FFFFFF8UL,
+_(SHT_SUNW_DEBUGSTR,   0x6FFFFFF8U,
 	`debugging information')
-_(SHT_CHECKSUM, 	     0x6FFFFFF8UL,
+_(SHT_CHECKSUM, 	     0x6FFFFFF8U,
 	`checksum for dynamic shared objects')
-_(SHT_SUNW_DEBUG,      0x6FFFFFF9UL,
+_(SHT_SUNW_DEBUG,      0x6FFFFFF9U,
 	`debugging information')
-_(SHT_SUNW_move,       0x6FFFFFFAUL,
+_(SHT_SUNW_move,       0x6FFFFFFAU,
 	`information to handle partially initialized symbols')
-_(SHT_SUNW_COMDAT,     0x6FFFFFFBUL,
+_(SHT_SUNW_COMDAT,     0x6FFFFFFBU,
 	`section supporting merging of multiple copies of data')
-_(SHT_SUNW_syminfo,    0x6FFFFFFCUL,
+_(SHT_SUNW_syminfo,    0x6FFFFFFCU,
 	`additional symbol information')
-_(SHT_SUNW_verdef,     0x6FFFFFFDUL,
+_(SHT_SUNW_verdef,     0x6FFFFFFDU,
 	`symbol versioning information')
-_(SHT_SUNW_verneed,    0x6FFFFFFEUL,
+_(SHT_SUNW_verneed,    0x6FFFFFFEU,
 	`symbol versioning requirements')
-_(SHT_SUNW_versym,     0x6FFFFFFFUL,
+_(SHT_SUNW_versym,     0x6FFFFFFFU,
 	`symbol versioning table')
-_(SHT_HIOS,            0x6FFFFFFFUL,
+_(SHT_HIOS,            0x6FFFFFFFU,
 	`end of OS-specific range')
-_(SHT_LOPROC,          0x70000000UL,
+_(SHT_LOPROC,          0x70000000U,
 	`start of processor-specific range')
-_(SHT_ARM_EXIDX,       0x70000001UL,
+_(SHT_ARM_EXIDX,       0x70000001U,
 	`exception index table')
-_(SHT_ARM_PREEMPTMAP,  0x70000002UL,
+_(SHT_ARM_PREEMPTMAP,  0x70000002U,
 	`BPABI DLL dynamic linking preemption map')
-_(SHT_ARM_ATTRIBUTES,  0x70000003UL,
+_(SHT_ARM_ATTRIBUTES,  0x70000003U,
 	`object file compatibility attributes')
-_(SHT_ARM_DEBUGOVERLAY, 0x70000004UL,
+_(SHT_ARM_DEBUGOVERLAY, 0x70000004U,
 	`overlay debug information')
-_(SHT_ARM_OVERLAYSECTION, 0x70000005UL,
+_(SHT_ARM_OVERLAYSECTION, 0x70000005U,
 	`overlay debug information')
-_(SHT_MIPS_LIBLIST,    0x70000000UL,
+_(SHT_MIPS_LIBLIST,    0x70000000U,
 	`DSO library information used in link')
-_(SHT_MIPS_MSYM,       0x70000001UL,
+_(SHT_MIPS_MSYM,       0x70000001U,
 	`MIPS symbol table extension')
-_(SHT_MIPS_CONFLICT,   0x70000002UL,
+_(SHT_MIPS_CONFLICT,   0x70000002U,
 	`symbol conflicting with DSO-defined symbols ')
-_(SHT_MIPS_GPTAB,      0x70000003UL,
+_(SHT_MIPS_GPTAB,      0x70000003U,
 	`global pointer table')
-_(SHT_MIPS_UCODE,      0x70000004UL,
+_(SHT_MIPS_UCODE,      0x70000004U,
 	`reserved')
-_(SHT_MIPS_DEBUG,      0x70000005UL,
+_(SHT_MIPS_DEBUG,      0x70000005U,
 	`reserved (obsolete debug information)')
-_(SHT_MIPS_REGINFO,    0x70000006UL,
+_(SHT_MIPS_REGINFO,    0x70000006U,
 	`register usage information')
-_(SHT_MIPS_PACKAGE,    0x70000007UL,
+_(SHT_MIPS_PACKAGE,    0x70000007U,
 	`OSF reserved')
-_(SHT_MIPS_PACKSYM,    0x70000008UL,
+_(SHT_MIPS_PACKSYM,    0x70000008U,
 	`OSF reserved')
-_(SHT_MIPS_RELD,       0x70000009UL,
+_(SHT_MIPS_RELD,       0x70000009U,
 	`dynamic relocation')
-_(SHT_MIPS_IFACE,      0x7000000BUL,
+_(SHT_MIPS_IFACE,      0x7000000BU,
 	`subprogram interface information')
-_(SHT_MIPS_CONTENT,    0x7000000CUL,
+_(SHT_MIPS_CONTENT,    0x7000000CU,
 	`section content classification')
-_(SHT_MIPS_OPTIONS,     0x7000000DUL,
+_(SHT_MIPS_OPTIONS,     0x7000000DU,
 	`general options')
-_(SHT_MIPS_DELTASYM,   0x7000001BUL,
+_(SHT_MIPS_DELTASYM,   0x7000001BU,
 	`Delta C++: symbol table')
-_(SHT_MIPS_DELTAINST,  0x7000001CUL,
+_(SHT_MIPS_DELTAINST,  0x7000001CU,
 	`Delta C++: instance table')
-_(SHT_MIPS_DELTACLASS, 0x7000001DUL,
+_(SHT_MIPS_DELTACLASS, 0x7000001DU,
 	`Delta C++: class table')
-_(SHT_MIPS_DWARF,      0x7000001EUL,
+_(SHT_MIPS_DWARF,      0x7000001EU,
 	`DWARF debug information')
-_(SHT_MIPS_DELTADECL,  0x7000001FUL,
+_(SHT_MIPS_DELTADECL,  0x7000001FU,
 	`Delta C++: declarations')
-_(SHT_MIPS_SYMBOL_LIB, 0x70000020UL,
+_(SHT_MIPS_SYMBOL_LIB, 0x70000020U,
 	`symbol-to-library mapping')
-_(SHT_MIPS_EVENTS,     0x70000021UL,
+_(SHT_MIPS_EVENTS,     0x70000021U,
 	`event locations')
-_(SHT_MIPS_TRANSLATE,  0x70000022UL,
+_(SHT_MIPS_TRANSLATE,  0x70000022U,
 	`???')
-_(SHT_MIPS_PIXIE,      0x70000023UL,
+_(SHT_MIPS_PIXIE,      0x70000023U,
 	`special pixie sections')
-_(SHT_MIPS_XLATE,      0x70000024UL,
+_(SHT_MIPS_XLATE,      0x70000024U,
 	`address translation table')
-_(SHT_MIPS_XLATE_DEBUG, 0x70000025UL,
+_(SHT_MIPS_XLATE_DEBUG, 0x70000025U,
 	`SGI internal address translation table')
-_(SHT_MIPS_WHIRL,      0x70000026UL,
+_(SHT_MIPS_WHIRL,      0x70000026U,
 	`intermediate code')
-_(SHT_MIPS_EH_REGION,  0x70000027UL,
+_(SHT_MIPS_EH_REGION,  0x70000027U,
 	`C++ exception handling region info')
-_(SHT_MIPS_XLATE_OLD,  0x70000028UL,
+_(SHT_MIPS_XLATE_OLD,  0x70000028U,
 	`obsolete')
-_(SHT_MIPS_PDR_EXCEPTION, 0x70000029UL,
+_(SHT_MIPS_PDR_EXCEPTION, 0x70000029U,
 	`runtime procedure descriptor table exception information')
-_(SHT_MIPS_ABIFLAGS,   0x7000002AUL,
+_(SHT_MIPS_ABIFLAGS,   0x7000002AU,
 	`ABI flags')
-_(SHT_SPARC_GOTDATA,   0x70000000UL,
+_(SHT_SPARC_GOTDATA,   0x70000000U,
 	`SPARC-specific data')
-_(SHT_X86_64_UNWIND,   0x70000001UL,
+_(SHT_X86_64_UNWIND,   0x70000001U,
 	`unwind tables for the AMD64')
-_(SHT_ORDERED,         0x7FFFFFFFUL,
+_(SHT_ORDERED,         0x7FFFFFFFU,
 	`sort entries in the section')
-_(SHT_HIPROC,          0x7FFFFFFFUL,
+_(SHT_HIPROC,          0x7FFFFFFFU,
 	`end of processor-specific range')
-_(SHT_LOUSER,          0x80000000UL,
+_(SHT_LOUSER,          0x80000000U,
 	`start of application-specific range')
-_(SHT_HIUSER,          0xFFFFFFFFUL,
+_(SHT_HIUSER,          0xFFFFFFFFU,
 	`end of application-specific range')
 ')
 
@@ -2128,6 +2141,127 @@ _(R_IA_64_LTOFF_DTPREL22,	0xBA)
 _(R_IA64_LTOFF_DTPREL22,	0xBA)
 ')
 
+# LoongArch relocations.
+#
+# Source: https://github.com/loongson/la-abi-specs/blob/release/laelf.adoc.
+define(`DEFINE_LOONGARCH_RELOCATIONS',`
+_(R_LARCH_NONE,				0)
+_(R_LARCH_32,				1)
+_(R_LARCH_64,				2)
+_(R_LARCH_RELATIVE,			3)
+_(R_LARCH_COPY,				4)
+_(R_LARCH_JUMP_SLOT,			5)
+_(R_LARCH_TLS_DTPMOD32,			6)
+_(R_LARCH_TLS_DTPMOD64,			7)
+_(R_LARCH_TLS_DTPREL32,			8)
+_(R_LARCH_TLS_DTPREL64,			9)
+_(R_LARCH_TLS_TPREL32,			10)
+_(R_LARCH_TLS_TPREL64,			11)
+_(R_LARCH_IRELATIVE,			12)
+_(R_LARCH_TLS_DESC32,			13)
+_(R_LARCH_TLS_DESC64,			14)
+_(R_LARCH_MARK_LA,			20)
+_(R_LARCH_MARK_PCREL,			21)
+_(R_LARCH_SOP_PUSH_PCREL,		22)
+_(R_LARCH_SOP_PUSH_ABSOLUTE,		23)
+_(R_LARCH_SOP_PUSH_DUP,			24)
+_(R_LARCH_SOP_PUSH_GPREL,		25)
+_(R_LARCH_SOP_PUSH_TLS_TPREL,		26)
+_(R_LARCH_SOP_PUSH_TLS_GOT,		27)
+_(R_LARCH_SOP_PUSH_TLS_GD,		28)
+_(R_LARCH_SOP_PUSH_PLT_PCREL,		29)
+_(R_LARCH_SOP_ASSERT,			30)
+_(R_LARCH_SOP_NOT,			31)
+_(R_LARCH_SOP_SUB,			32)
+_(R_LARCH_SOP_SL,			33)
+_(R_LARCH_SOP_SR,			34)
+_(R_LARCH_SOP_ADD,			35)
+_(R_LARCH_SOP_AND,			36)
+_(R_LARCH_SOP_IF_ELSE,			37)
+_(R_LARCH_SOP_POP_32_S_10_5,		38)
+_(R_LARCH_SOP_POP_32_U_10_12,		39)
+_(R_LARCH_SOP_POP_32_S_10_12,		40)
+_(R_LARCH_SOP_POP_32_S_10_16,		41)
+_(R_LARCH_SOP_POP_32_S_10_16_S2,	42)
+_(R_LARCH_SOP_POP_32_S_5_20,		43)
+_(R_LARCH_SOP_POP_32_S_0_5_10_16_S2,	44)
+_(R_LARCH_SOP_POP_32_S_0_10_10_16_S2,	45)
+_(R_LARCH_SOP_POP_32_U,			46)
+_(R_LARCH_ADD8,				47)
+_(R_LARCH_ADD16,			48)
+_(R_LARCH_ADD24,			49)
+_(R_LARCH_ADD32,			50)
+_(R_LARCH_ADD64,			51)
+_(R_LARCH_SUB8,				52)
+_(R_LARCH_SUB16,			53)
+_(R_LARCH_SUB24,			54)
+_(R_LARCH_SUB32,			55)
+_(R_LARCH_SUB64,			56)
+_(R_LARCH_GNU_VTINHERIT,		57)
+_(R_LARCH_GNU_VTENTRY,			58)
+_(R_LARCH_B16,				64)
+_(R_LARCH_B21,				65)
+_(R_LARCH_B26,				66)
+_(R_LARCH_ABS_HI20,			67)
+_(R_LARCH_ABS_LO12,			68)
+_(R_LARCH_ABS64_LO20,			69)
+_(R_LARCH_ABS64_HI12,			70)
+_(R_LARCH_PCALA_HI20,			71)
+_(R_LARCH_PCALA_LO12,			72)
+_(R_LARCH_PCALA64_LO20,			73)
+_(R_LARCH_PCALA64_HI12,			74)
+_(R_LARCH_GOT_PC_HI20,			75)
+_(R_LARCH_GOT_PC_LO12,			76)
+_(R_LARCH_GOT64_PC_LO20,		77)
+_(R_LARCH_GOT64_PC_HI12,		78)
+_(R_LARCH_GOT_HI20,			79)
+_(R_LARCH_GOT_LO12,			80)
+_(R_LARCH_GOT64_LO20,			81)
+_(R_LARCH_GOT64_HI12,			82)
+_(R_LARCH_TLS_LE_HI20,			83)
+_(R_LARCH_TLS_LE_LO12,			84)
+_(R_LARCH_TLS_LE64_LO20,		85)
+_(R_LARCH_TLS_LE64_HI12,		86)
+_(R_LARCH_TLS_IE_PC_HI20,		87)
+_(R_LARCH_TLS_IE_PC_LO12,		88)
+_(R_LARCH_TLS_IE64_PC_LO20,		89)
+_(R_LARCH_TLS_IE64_PC_HI12,		90)
+_(R_LARCH_TLS_IE_HI20,			91)
+_(R_LARCH_TLS_IE_LO12,			92)
+_(R_LARCH_TLS_IE64_LO20,		93)
+_(R_LARCH_TLS_IE64_HI12,		94)
+_(R_LARCH_TLS_LD_PC_HI20,		95)
+_(R_LARCH_TLS_LD_HI20,			96)
+_(R_LARCH_TLS_GD_PC_HI20,		97)
+_(R_LARCH_TLS_GD_HI20,			98)
+_(R_LARCH_32_PCREL,			99)
+_(R_LARCH_RELAX,			100)
+_(R_LARCH_ALIGN,			102)
+_(R_LARCH_PCREL20_S2,			103)
+_(R_LARCH_ADD6,				105)
+_(R_LARCH_SUB6,				106)
+_(R_LARCH_ADD_ULEB128,			107)
+_(R_LARCH_SUB_ULEB128,			108)
+_(R_LARCH_64_PCREL,			109)
+_(R_LARCH_CALL36,			110)
+_(R_LARCH_TLS_DESC_PC_HI20,		111)
+_(R_LARCH_TLS_DESC_PC_LO12,		112)
+_(R_LARCH_TLS_DESC64_PC_LO20,		113)
+_(R_LARCH_TLS_DESC64_PC_HI12,		114)
+_(R_LARCH_TLS_DESC_HI20,		115)
+_(R_LARCH_TLS_DESC_LO12,		116)
+_(R_LARCH_TLS_DESC64_LO20,		117)
+_(R_LARCH_TLS_DESC64_HI12,		118)
+_(R_LARCH_TLS_DESC_LD,			119)
+_(R_LARCH_TLS_DESC_CALL,		120)
+_(R_LARCH_TLS_LE_HI20_R,		121)
+_(R_LARCH_TLS_LE_ADD_R,			122)
+_(R_LARCH_TLS_LE_LO12_R,		123)
+_(R_LARCH_TLS_LD_PCREL20_S2,		124)
+_(R_LARCH_TLS_GD_PCREL20_S2,		125)
+_(R_LARCH_TLS_DESC_PCREL20_S2,		126)
+')
+
 define(`DEFINE_MIPS_RELOCATIONS',`
 _(R_MIPS_NONE,			0)
 _(R_MIPS_16,			1)
@@ -2580,6 +2714,7 @@ DEFINE_AARCH64_RELOCATIONS()
 DEFINE_AMD64_RELOCATIONS()
 DEFINE_ARM_RELOCATIONS()
 DEFINE_IA64_RELOCATIONS()
+DEFINE_LOONGARCH_RELOCATIONS()
 DEFINE_MIPS_RELOCATIONS()
 DEFINE_PPC32_RELOCATIONS()
 DEFINE_PPC64_RELOCATIONS()
@@ -2626,7 +2761,7 @@ _(NT_PRPSINFO,			3,
 	`Process information')
 _(NT_AUXV,			6,
 	`Auxiliary vector')
-_(NT_PRXFPREG,		0x46E62B7FUL,
+_(NT_PRXFPREG,		0x46E62B7FU,
 	`Linux user_xfpregs structure')
 _(NT_PSTATUS,			10,
 	`Linux process status')
@@ -2688,17 +2823,17 @@ _(ODK_PAGESIZE,   11,
 # ODK_EXCEPTIONS info field masks.
 #
 define(`DEFINE_OPTION_EXCEPTIONS',`
-_(OEX_FPU_MIN,    0x0000001FUL,
+_(OEX_FPU_MIN,    0x0000001FU,
 	`minimum FPU exception which must be enabled')
-_(OEX_FPU_MAX,    0x00001F00UL,
+_(OEX_FPU_MAX,    0x00001F00U,
 	`maximum FPU exception which can be enabled')
-_(OEX_PAGE0,      0x00010000UL,
+_(OEX_PAGE0,      0x00010000U,
 	`page zero must be mapped')
-_(OEX_SMM,        0x00020000UL,
+_(OEX_SMM,        0x00020000U,
 	`run in sequential memory mode')
-_(OEX_PRECISEFP,  0x00040000UL,
+_(OEX_PRECISEFP,  0x00040000U,
 	`run in precise FP exception mode')
-_(OEX_DISMISS,    0x00080000UL,
+_(OEX_DISMISS,    0x00080000U,
 	`dismiss invalid address traps')
 ')
 
@@ -2716,21 +2851,21 @@ _(OPAD_SYMBOL,   0x0004)
 # info field and hwp_flags[12] masks.
 #
 define(`DEFINE_ODK_HWPATCH_MASKS',`
-_(OHW_R4KEOP,     0x00000001UL,
+_(OHW_R4KEOP,     0x00000001U,
 	`patch for R4000 branch at end-of-page bug')
-_(OHW_R8KPFETCH,  0x00000002UL,
+_(OHW_R8KPFETCH,  0x00000002U,
 	`R8000 prefetch bug may occur')
-_(OHW_R5KEOP,     0x00000004UL,
+_(OHW_R5KEOP,     0x00000004U,
 	`patch for R5000 branch at end-of-page bug')
-_(OHW_R5KCVTL,    0x00000008UL,
+_(OHW_R5KCVTL,    0x00000008U,
 	`R5000 cvt.[ds].l bug: clean == 1')
-_(OHW_R10KLDL,    0x00000010UL,
+_(OHW_R10KLDL,    0x00000010U,
 	`need patch for R10000 misaligned load')
-_(OHWA0_R4KEOP_CHECKED, 0x00000001UL,
+_(OHWA0_R4KEOP_CHECKED, 0x00000001U,
 	`object checked for R4000 end-of-page bug')
-_(OHWA0_R4KEOP_CLEAN, 0x00000002UL,
+_(OHWA0_R4KEOP_CLEAN, 0x00000002U,
 	`object verified clean for R4000 end-of-page bug')
-_(OHWO0_FIXADE,   0x00000001UL,
+_(OHWO0_FIXADE,   0x00000001U,
 	`object requires call to fixade')
 ')
 
@@ -2738,9 +2873,9 @@ _(OHWO0_FIXADE,   0x00000001UL,
 # ODK_IDENT/ODK_GP_GROUP info field masks.
 #
 define(`DEFINE_ODK_GP_MASKS',`
-_(OGP_GROUP,      0x0000FFFFUL,
+_(OGP_GROUP,      0x0000FFFFU,
 	`GP group number')
-_(OGP_SELF,       0x00010000UL,
+_(OGP_SELF,       0x00010000U,
 	`GP group is self-contained')
 ')
 
