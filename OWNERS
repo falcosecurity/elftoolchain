@@ -3,7 +3,6 @@ approvers:
   - gnosek
   - mstemm
   - fededp
-  - andreagit97
   - molter73
   - lucaguerra
   - jasondellaluce
@@ -11,3 +10,4 @@ reviewers:
   - hbrueckner
 emeritus_approvers:
   - incertum
+  - andreaterzolo
